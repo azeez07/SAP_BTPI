@@ -1,0 +1,21 @@
+POST  http://localhost:4004/odata/v4/ronaldo-cr7-catalog/PostInfo
+
+Content-Type: application/json
+
+{
+    "req_data":[
+        {
+"Product_Name": "Jagan",
+"Product_Company_Name": "78922",
+"Product_Color": "98227",
+"Product_Size": 10,
+"Product_Quality": 1,
+"Product_Qty": null,
+"Delivery_Address": null,
+"Customer_PhoneNumber": null,
+"Customer_EmailAddress": null,
+"Delivery_Chargers": null,
+"Payment_Mode": null
+}
+]
+}

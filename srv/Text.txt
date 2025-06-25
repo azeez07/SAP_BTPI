@@ -1,0 +1,25 @@
+const cds = require('@sap/cds');
+
+module.exports = async (srv) => {
+    srv.before('CREATE', 'Amazon_Web_Application', async (req) => {
+        try {
+            let getdata = req.data;
+
+            if (getdata.Grocery== "") {
+                return req.reject(400, 'Please enter Grocery — this field is mandatory')
+            }
+
+            if (getdata.Mobiles== "") {
+                return req.reject(400, 'Please enter Mobiles — this field is mandatory')
+            }
+
+            if (getdata.Home == "") {
+                return req.reject(400, 'Please enter Home — this field is mandatory')
+            }
+
+        } catch (error) {
+            console.error("Error in before handler:", error)
+            return req.reject(500, 'Internal Server Error')
+        }
+    })
+}

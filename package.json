@@ -1,0 +1,44 @@
+{
+  "name": "Ronaldo_CR7",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^6.8.1",
+    "express": "^4",
+    "hdb": "^0.19.12",
+    "init": "^0.1.2",
+    "sql": "^0.78.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@sap/cds-dk": "^7"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "hana": {
+      "Deploy-format": "hbdtable",
+      "Syntax": "hdi"
+    },
+    "build": {
+      "task": [
+        {
+          "for": "hana",
+          "dest": "../db"
+        },
+        {
+          "for": "node-cf"
+        }
+      ]
+    },
+    "requires": {
+      "db": {
+        "kind": "sql"
+      }
+    }
+  }
+}

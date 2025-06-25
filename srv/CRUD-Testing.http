@@ -1,0 +1,14 @@
+# UPDATE http://localhost:4004/odata/v4/ronaldo-cr7-catalog/Booking
+
+# Content-Type: application/json
+
+# {
+# "Grocery": "07",
+# "Mobiles": "Samsung",
+# "Home": null,
+# "Gadgets": null,
+# "Appliances": null,
+# "Fashion": null,
+# "Food": null,
+# "Electronics": null
+# }
