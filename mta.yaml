@@ -25,10 +25,10 @@ modules:
           srv-url: ${default-url}
     requires:
       - name: Ronaldo_CR7-db
-
+      
   - name: Ronaldo_CR7-db-deployer
     type: hdb
-    path: gen/db
+    path: db
     parameters:
       buildpack: nodejs_buildpack
     requires:

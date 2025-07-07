@@ -6,26 +6,29 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@sap/cds": "^6.8.1",
+    "@sap/cds": "^6",
+    "@sap/xsenv": "^5.6.1",
+    "@sap/xssec": "^4.8.0",
     "express": "^4",
     "hdb": "^0.19.12",
     "init": "^0.1.2",
+    "password": "^0.1.1",
     "sql": "^0.78.0",
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
-    "@sap/cds-dk": "^7"
+    "@sap/cds-dk": "^7.9.10"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds run"
   },
   "cds": {
     "hana": {
-      "Deploy-format": "hbdtable",
-      "Syntax": "hdi"
+      "deploy-format": "hdbtable",
+      "syntax": "hdi"
     },
     "build": {
-      "task": [
+      "tasks": [
         {
           "for": "hana",
           "dest": "../db"
@@ -38,6 +41,9 @@
     "requires": {
       "db": {
         "kind": "sql"
+      },
+      "auth": {
+        "kind": "xsuaa"
       }
     }
   }
